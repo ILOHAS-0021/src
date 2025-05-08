@@ -61,8 +61,8 @@ jobs:
 
       - name: Commit and Push
         run: |
-          git config user.email ${{ env.GIT_EMAIL }}
-          git config user.name ${{ env.GIT_NAME }}
+          git config user.email "${{ env.GIT_EMAIL }}"
+          git config user.name "${{ env.GIT_NAME }}"
           git add deploy.yml
           git commit -m "Update image tag"
           git push origin main
